@@ -1,4 +1,4 @@
-control Protect(inout header_t hdr,
+control Decaps_P(inout header_t hdr,
             in ingress_intrinsic_metadata_t ig_intr_md,
             inout ingress_intrinsic_metadata_for_tm_t ig_tm_md,
             inout ingress_metadata_t ig_md) {
