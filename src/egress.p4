@@ -12,13 +12,6 @@ control egress(
     Mac() mac_c;
 
     apply {
-        if(DEVICE_TYPE == 1) {
-            hdr.ipv4.srcAddr = (bit<32>) (eg_intr_from_prsr.global_tstamp - hdr.ethernet.src_addr);
-        }
-        else {
-            hdr.ipv4.identification = (bit<16>) (eg_intr_from_prsr.global_tstamp - hdr.ethernet.src_addr);
-        }
-       
         mac_c.apply(hdr, eg_intr_md);
         
     }

@@ -27,7 +27,6 @@
 #include <tna.p4>
 #endif
 
-#include "src/ports.p4"
 #include "src/headers.p4"
 #include "src/ingress.p4"
 #include "src/egress.p4"
